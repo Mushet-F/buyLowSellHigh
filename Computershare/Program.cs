@@ -6,7 +6,7 @@ namespace Computershare
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string extractData = "Y";
 
@@ -20,9 +20,9 @@ namespace Computershare
 
                     double[] pricesDataSet = rawData.Split(',').Select(n => Convert.ToDouble(n)).ToArray();
 
-                    Stock month = new Stock(pricesDataSet);
+                    Stock month = new(pricesDataSet);
 
-                    Console.WriteLine(month.getBestTrade(month.Prices));
+                    Console.WriteLine(Stock.GetBestTrade(month.Prices));
                 }
                 catch (Exception e)
                 {

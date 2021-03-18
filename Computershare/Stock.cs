@@ -19,7 +19,7 @@ namespace Computershare
             get; set;
         }
 
-        public string getBestTrade(double[] Prices)
+        public static string GetBestTrade(double[] Prices)
         {
 
             double maxProfit = Prices[1] - Prices[0];
